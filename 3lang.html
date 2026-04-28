@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html>
+
+<head lang="en">
+<meta charset="UTF-8">
+<title id="page_title">Meem Tailor | BHUJ</title>
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no"/>
+
+<link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="css/namari-color.css">
+<link rel="stylesheet" href="css/font-awesome.min.css">
+<link href="css/animate.css" rel="stylesheet">
+
+</head>
+
+<body>
+
+<!-- Language Switch -->
+<div style="position:fixed;right:20px;top:20px;z-index:999;">
+<button onclick="setLang('en')">EN</button>
+<button onclick="setLang('hi')">HI</button>
+<button onclick="setLang('gu')">GU</button>
+</div>
+
+<header id="banner">
+<h1 id="heading"></h1>
+<h2 id="banner_text"></h2>
+</header>
+
+<section id="about">
+
+<h3 id="success"></h3>
+<h2 id="about_title"></h2>
+
+<p id="about_p1"></p>
+<p id="about_p2"></p>
+
+<h4 id="instyle_title"></h4>
+<p id="instyle_text"></p>
+
+<h4 id="earthquake_title"></h4>
+<p id="earthquake_text"></p>
+
+<h4 id="rebirth_title"></h4>
+<p id="rebirth_text"></p>
+
+<h4 id="meem_title"></h4>
+<p id="meem_text"></p>
+
+</section>
+
+<section id="shop">
+<h3 id="shop_title"></h3>
+<h2 id="shop_tagline"></h2>
+
+<h3 id="address"></h3>
+<h3 id="map"></h3>
+</section>
+
+<script>
+const t = {
+
+en: {
+page_title:"Meem Tailor | BHUJ",
+
+heading:"YOUR FABRICS BECOME FABULOUS",
+
+banner_text:`Transforming mere fabrics into fabulous creations, you weave a tapestry of elegance and style. With a touch of creativity, your fabrics transcend the ordinary, embodying a unique charm that captivates. "Your fabrics become fabulous", a testament to your artistry and passion for fashion.`,
+
+success:"SUCCESS",
+
+about_title:"From InStyle to Meem: A Tailoring Legacy Unveiled since 1988",
+
+about_p1:`In the vibrant world of tailoring, certain names stand out for their rich history and resilience in the face of challenges. One such tale is that of "InStyle Tailor," a renowned establishment that began its journey in 1988. However, destiny had different plans for this tailoring haven, and it underwent a transformation following the seismic events of the 2001 earthquake. Emerging stronger than ever, it emerged with a new identity - "Meem Tailor." Let's delve into the fascinating history and evolution of this iconic tailoring house.`,
+
+about_p2:`The journey from InStyle to Meem is not just a tale of a tailor shop changing its name; it's a narrative of resilience, reinvention, and the enduring spirit of craftsmanship. With each stitch, Meem Tailor carries forward the legacy of InStyle, paying homage to its past while embracing the future of bespoke tailoring. As the years unfold, the story of Meem Tailor continues to be woven into the fabric of the fashion landscape, a testament to the enduring power of a tailor's artistry and the strength to adapt in the face of change.`,
+
+instyle_title:"The Inception of InStyle Tailor (1988-2001):",
+
+instyle_text:`Vision and Craftsmanship:
+Founded in 1988, InStyle Tailor was born out of a passion for precision and a commitment to sartorial excellence. For over a decade, it carved a niche for itself, becoming synonymous with impeccable craftsmanship, attention to detail, and a personalized approach to tailoring. The skilled artisans at InStyle worked tirelessly to create bespoke garments that reflected the style and individuality of each customer.`,
+
+earthquake_title:"Adversity Strikes: The 2001 Earthquake:",
+
+earthquake_text:`A Test of Resilience:
+The year 2001 brought a seismic shift, quite literally, to the story of InStyle Tailor. The devastating earthquake that struck challenged the very foundations of this establishment. Like a tailor facing a challenging fabric, the team at InStyle confronted adversity head-on.`,
+
+rebirth_title:"Rebirth as Meem Tailor:",
+
+rebirth_text:`Evolution and Reinvention:
+In the aftermath of the earthquake, the decision was made to not only rebuild but to reinvent. The phoenix rising from the ashes, InStyle Tailor emerged with a new identity – "Meem Tailor."`,
+
+meem_title:"Meem Tailor: A Legacy Continues (Post-2001):",
+
+meem_text:`Innovation and Tradition:
+Meem Tailor seamlessly blended the rich heritage of InStyle with a renewed sense of innovation. The tailoring house embraced modern techniques while retaining its core values.`,
+
+shop_title:"OUR SHOP",
+shop_tagline:"Where Threads Weave Dreams",
+address:"ADDRESS",
+map:"MAP"
+},
+
+hi: {
+page_title:"मीम टेलर | भुज",
+
+heading:"आपके कपड़े बनते हैं शानदार",
+
+banner_text:`साधारण कपड़ों को शानदार डिज़ाइन में बदलते हुए, हम स्टाइल और सुंदरता का निर्माण करते हैं। "आपके कपड़े बनते हैं शानदार" हमारी कला का प्रमाण है।`,
+
+success:"सफलता",
+
+about_title:"इंस्टाइल से मीम तक: 1988 से विरासत",
+
+about_p1:`1988 में शुरू हुआ इंस्टाइल टेलर गुणवत्ता और कारीगरी के लिए प्रसिद्ध हुआ। 2001 के भूकंप के बाद यह मीम टेलर बना।`,
+
+about_p2:`यह कहानी संघर्ष, बदलाव और कारीगरी की परंपरा की है।`,
+
+instyle_title:"इंस्टाइल टेलर की शुरुआत (1988-2001):",
+instyle_text:"1988 में स्थापित, उत्कृष्ट कारीगरी के लिए प्रसिद्ध।",
+
+earthquake_title:"2001 का भूकंप:",
+earthquake_text:"इस घटना ने व्यवसाय को चुनौती दी।",
+
+rebirth_title:"मीम टेलर के रूप में पुनर्जन्म:",
+rebirth_text:"भूकंप के बाद नई पहचान मिली।",
+
+meem_title:"मीम टेलर की विरासत:",
+meem_text:"परंपरा और आधुनिकता का संगम।",
+
+shop_title:"हमारी दुकान",
+shop_tagline:"जहाँ धागे सपने बुनते हैं",
+address:"पता",
+map:"नक्शा"
+},
+
+gu: {
+page_title:"મીમ ટેલર | ભુજ",
+
+heading:"તમારા કાપડ બની જાય છે શાનદાર",
+
+banner_text:`સાધારણ કાપડને અદ્ભુત ડિઝાઇનમાં ફેરવીને અમે સૌંદર્ય અને સ્ટાઇલ સર્જીએ છીએ.`,
+
+success:"સફળતા",
+
+about_title:"ઇનસ્ટાઇલથી મીમ સુધી: 1988થી વારસાગાથા",
+
+about_p1:`1988માં શરૂ થયેલું ઇનસ્ટાઇલ ટેલર ગુણવત્તા માટે જાણીતું બન્યું. 2001ના ભૂકંપ પછી તે મીમ ટેલર બન્યું.`,
+
+about_p2:`આ સંઘર્ષ અને નવી શરૂઆતની કહાની છે.`,
+
+instyle_title:"ઇનસ્ટાઇલ ટેલરની શરૂઆત (1988-2001):",
+instyle_text:"ઉત્તમ કારીગરી માટે જાણીતી શરૂઆત.",
+
+earthquake_title:"2001નો ભૂકંપ:",
+earthquake_text:"આ ઘટના પડકારરૂપ બની.",
+
+rebirth_title:"મીમ ટેલર તરીકે નવી શરૂઆત:",
+rebirth_text:"નવું જીવન અને ઓળખ મળી.",
+
+meem_title:"મીમ ટેલરની વારસાગાથા:",
+meem_text:"પરંપરા અને નવીનતાનું સંયોજન.",
+
+shop_title:"અમારી દુકાન",
+shop_tagline:"જ્યાં ધાગા સપનાઓ ગૂંથે છે",
+address:"સરનામું",
+map:"નકશો"
+}
+};
+
+function setLang(lang){
+localStorage.setItem("lang",lang);
+for(let key in t[lang]){
+if(document.getElementById(key)){
+document.getElementById(key).innerText = t[lang][key];
+}
+}
+}
+
+window.onload=function(){
+setLang(localStorage.getItem("lang")||"en");
+};
+</script>
+
+</body>
+</html>
